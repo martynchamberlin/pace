@@ -69,7 +69,7 @@ jQuery(document).ready(($) => {
     return false;
   });
 
-  $('document').on('click', 'a.repeat', () => {
+  $('body').on('click', 'a.repeat', () => {
     $('.answer').hide();
     $('form').removeClass('hiding').addClass('zoomIn animated');
     return false;
