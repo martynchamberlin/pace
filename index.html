@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+  <title>Check Your Pace</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="site.js"></script>
+</head>
+<body>
+<div class="bg">
+  <div class="overlay"></div>
+</div>
+<div class="wrap bounceInDown animated animatable">
+  <form novalidate action="" class="animatable" method="post">
+    <span class="you-ran">You ran</span>
+    <input autocomplete="off" name="distance" type="number" value="3.12" class="animatable">
+
+    <select name="original_length">
+      <option value="miles">miles</option>
+      <option value="kilometers">kilometers</option>
+    </select>
+    <br />in
+
+    <input autocomplete="off" type="number" value="22" name="minutes" class="animatable">
+    minutes<br />and
+    <input autocomplete="off" name="seconds" type="number" value="47" class="animatable">
+    seconds.<br />
+    <p class="what-is-their animatable"><span class="your-pace-in">What was your pace in</span>
+      <select name="target_length" class="typeof_distance">
+        <option value="miles">miles</option>
+        <option value="kilometers">kilometers</option>
+      </select> ?
+    </p>
+
+    <button class="animatable">Calculate</button>
+  </form>
+  <div class="answer"></div>
+</div>
+</body>
+</html>

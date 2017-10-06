@@ -1,0 +1,155 @@
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Avenir, system, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica Neue, Helvetica, Lucida Grande;
+  color: black;
+  font-size: 21px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+.bg, .overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background-image: url(images/bg.jpg?a);
+  background-size: cover;
+}
+
+.wrap {
+  position: relative;
+  -webkit-animation-duration: .7s;
+  /*  	-vendor-animation-delay: 2s;*/
+  /*  	-vendor-animation-iteration-count: infinite;*/
+  max-width: 450px;
+  margin: 0px auto;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, .85);
+  border-radius: 10px;
+}
+
+.you-ran {
+  font-size: 40px;
+  line-height: 48px;
+  margin: 5px 0 25px;
+  display: block;
+}
+
+input, select, button {
+  -webkit-animation-duration: .8s !important;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  width: 70px;
+  padding: 4px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 auto 10px;
+  outline: none;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, .1);
+  -webkit-appearance: none;
+  color: inherit;
+  transition: .3s;
+  background: none;
+  cursor: pointer;
+}
+
+button:hover, input:focus {
+  background: rgba(255, 255, 255, .31);
+}
+
+input.error {
+  background: rgba(221, 51, 51, .1);
+}
+
+input.error:focus {
+  background: rgba(221, 51, 51, .2);
+}
+
+select {
+  width: auto;
+  padding: 4px 14px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  width: 240px;
+  display: block;
+  margin: 30px auto 15px;
+}
+
+.typeof_distance {
+  transition: .5s;
+}
+
+form.hiding {
+  opacity: 0;
+}
+
+.answer {
+  position: absolute;
+  top: 50%;
+  margin: -40px 0 0;
+  text-align: center;
+  width: 100%;
+
+}
+
+.answer .huge {
+  font-size: 55px;
+}
+
+.answer a {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+@media all and (max-width: 450px) {
+  .wrap {
+    border-radius: 0;
+    margin-top: 0;
+    background: none;
+    padding: 19px 0;
+  }
+
+  .answer .huge {
+    font-size: 35px;
+  }
+
+  .bg .overlay {
+    background: #fff;
+  }
+
+  .your-pace-in {
+    display: block;
+  }
+
+  button {
+    margin: 10px auto 15px;
+  }
+}
