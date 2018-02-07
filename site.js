@@ -55,8 +55,13 @@ jQuery(document).ready(($) => {
       }
       const total_seconds = minutes * 60 + seconds;
       const seconds_per_length = total_seconds / target_length_amount;
-      const answer_minutes = Math.floor(seconds_per_length / 60);
-      const answer_seconds = `0${Math.round(seconds_per_length % 60)}`.substr(-2);
+      let answer_minutes = Math.floor(seconds_per_length / 60);
+      let answer_seconds = Math.round(seconds_per_length % 60);
+      if (answer_seconds === 60) {
+        answer_minutes += 1;
+        answer_seconds = 0;
+      }
+      answer_seconds = `0${answer_seconds}`.substr(-2);
 
       $('form').addClass('hiding');
       $('.answer').html(`<div class="huge">${answer_minutes}:${answer_seconds} / ${target_length.substr(0, target_length.length - 1)}</div><a href="" class="repeat">Go back</a>`);
