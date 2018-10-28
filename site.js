@@ -4,16 +4,6 @@ const miles_to_kilometers = (miles) => miles * 1.60934;
 jQuery(document).ready(($) => {
   $('.wrap').centerVertically();
 
-  $('select[name="original_length"]').change((e) => {
-    $('.typeof_distance').css('opacity', 0);
-    var div = $(e.currentTarget);
-    setTimeout(() => {
-      $('.typeof_distance').val($(div).val());
-      $('.typeof_distance').css('opacity', 1);
-    }, 500);
-    $('.what-is-their').addClass('animated pulse');
-  });
-
   $('.animatable').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', (e) => {
     $(e.currentTarget).removeClass('pulse shake zoomIn animated');
   });
